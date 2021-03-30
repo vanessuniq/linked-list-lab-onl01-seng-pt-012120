@@ -11,7 +11,7 @@ function next(node, collection) {
 };
 
 function nodeAt(index, linkedList, collection) {
-    let current = collection[linkedList],
+    let current = headNode(linkedList, collection),
         count = 0;
     while (count !== index) {
         const nextKey = current.next;
@@ -22,7 +22,7 @@ function nodeAt(index, linkedList, collection) {
 };
 
 function addressAt(index, linkedList, collection) {
-    let current = collection[linkedList],
+    let current = headNode(linkedList, collection),
         count = 0,
         currentAddress = linkedList;
     while (count !== index) {
